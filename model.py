@@ -452,7 +452,9 @@ def Deeplabv3(weights='pascal_voc', input_tensor=None, input_shape=(512, 512, 3)
                                     WEIGHTS_PATH_X,
                                     cache_subdir='models')
         else:
-            weights_path = './deeplabv3_mobilenetv2_tf_dim_ordering_tf_kernels.h5'
+            weights_path = get_file('deeplabv3_xception_tf_dim_ordering_tf_kernels.h5',
+                                    WEIGHTS_PATH_MOBILE,
+                                    cache_subdir='models')
 
         model.load_weights(weights_path, by_name=True)
     elif weights == 'cityscapes':
@@ -461,7 +463,9 @@ def Deeplabv3(weights='pascal_voc', input_tensor=None, input_shape=(512, 512, 3)
                                     WEIGHTS_PATH_X_CS,
                                     cache_subdir='models')
         else:
-            weights_path = './deeplabv3_xception_tf_dim_ordering_tf_kernels_cityscapes.h5'
+            weights_path = get_file('deeplabv3_xception_tf_dim_ordering_tf_kernels.h5',
+                                    WEIGHTS_PATH_MOBILE_CS,
+                                    cache_subdir='models')
             
         model.load_weights(weights_path, by_name=True)
     return model
