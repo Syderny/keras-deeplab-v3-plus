@@ -3,7 +3,7 @@ from __future__ import print_function
 import os
 import numpy as np
 import tensorflow as tf
-from keras.utils.data_utils import get_file
+from tensorflow.keras.utils import get_file
 
 
 def get_xception_filename(key):

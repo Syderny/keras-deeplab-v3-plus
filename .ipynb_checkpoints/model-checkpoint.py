@@ -40,10 +40,10 @@ from tensorflow.keras.layers import AveragePooling2D
 from tensorflow.keras.layers import GlobalAveragePooling2D
 from tensorflow.keras.layers import Layer
 from tensorflow.keras.layers import InputSpec
-from tensorflow.python.keras.utils.layer_utils import get_source_inputs
-from tensorflow.python.keras.applications.imagenet_utils import preprocess_input
-from tensorflow.python.keras.utils import conv_utils
-from tensorflow.python.keras.utils.data_utils import get_file
+from tensorflow.keras.utils import get_source_inputs
+from tensorflow.keras.applications.imagenet_utils import preprocess_input
+from tensorflow.keras.utils import conv_utils
+from tensorflow.keras.utils import get_file
 
 WEIGHTS_PATH_X = "https://github.com/bonlime/keras-deeplab-v3-plus/releases/download/1.1/deeplabv3_xception_tf_dim_ordering_tf_kernels.h5"
 WEIGHTS_PATH_MOBILE = "https://github.com/bonlime/keras-deeplab-v3-plus/releases/download/1.1/deeplabv3_mobilenetv2_tf_dim_ordering_tf_kernels.h5"
